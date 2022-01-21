@@ -1,0 +1,522 @@
+[
+  {
+    "days": {
+      "mon": [
+        {
+          "time": [
+            {
+              "ID": 0,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 1,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 2,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 3,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 4,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 5,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 6,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 7,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            }
+          ]
+        }
+      ],
+      "Tuesday": [
+        {
+          "time": [
+            {
+              "ID": 0,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": 115,
+              "end": 1715,
+              "number": 4,
+              "row": 1
+            },
+            {
+              "ID": 1,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 2,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 3,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 4,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 5,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 6,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 7,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            }
+          ]
+        }
+      ],
+      "Wednesday": [
+        {
+          "time": [
+            {
+              "ID": 0,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": 915,
+              "end": 1015,
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 1,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": 1015,
+              "end": 1110,
+              "number": 1,
+              "row": 1
+            },
+            {
+              "ID": 2,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 3,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 4,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 5,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 6,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 7,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            }
+          ]
+        }
+      ],
+      "the": [
+        {
+          "time": [
+            {
+              "ID": 0,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 1,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 2,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 3,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 4,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 5,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 6,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 7,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            }
+          ]
+        }
+      ],
+      "fri": [
+        {
+          "time": [
+            {
+              "ID": 0,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 1,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 2,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 3,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 4,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 5,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 6,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 7,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            }
+          ]
+        }
+      ],
+      "sat": [
+        {
+          "time": [
+            {
+              "ID": 0,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 1,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 2,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 3,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 4,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 5,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 6,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 7,
+              "class": 1,
+              "name": "",
+              "t-name": "",
+              "start": "",
+              "end": "",
+              "number": 0,
+              "row": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
