@@ -151,7 +151,7 @@ def typeInChatBox(msg):
 def main():
     
     while(True):
-        with open("tt.json", "r") as read_file:
+        with open("TimeTable.json", "r") as read_file:
             time_table_temp = json.load(read_file)
         time_table = ""
         curr_day = datetime.today().strftime('%A')
