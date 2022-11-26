@@ -2,7 +2,7 @@
 python project for joining classes on time<br />
  
 # How to use
-simply replace images with there counterpats at that time using snippeting tool (win+shift+s)<br />
+simply replace images with there counterpats at that time using snipping tool (win+shift+s)<br />
 edit Timetable.json with, class scheduled or not(bool), subject code,teacher name, start time, end time, row and column number for the team
  
 
