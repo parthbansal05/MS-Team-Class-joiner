@@ -114,23 +114,6 @@ def PressKey(hexKeyCode):
     ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
 
 
-# def IOT_f(data):
-#     global data_curr_client
-#     ID_temp = data['ID']
-#     dev_temp = data['dev']
-#     state_temp = data['state']
-#     for i in range(len(dev_temp)):
-#         data_curr_client['data'][ID_temp]['state'][dev_temp[i]] = state_temp
-#         data_curr_client['data'][ID_temp]['user'][dev_temp[i]] = 1
-#     w_json(init_client_path, data_curr_client)
-
-
-# def w_json(file_name, data):
-
-#     with open(file_name, "w") as write_file:
-#         json.dump(data, write_file)
-
-
 def join_class(class_obj):
     print(class_obj)
     click(260, 1050)
@@ -142,7 +125,7 @@ def join_class(class_obj):
     click((160+228*class_obj["number"]), 243+209*class_obj["row"])
     time.sleep(holdoff_delay)
 
-    pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    pytesseract.tesseract_cmd = r"tesseract.exe"
 
     screen = pyautogui.screenshot()
     screen = cv2.cvtColor(np.array(screen), cv2.COLOR_RGB2BGR)
@@ -206,4 +189,3 @@ def main():
 
 
 main()
-# print()
