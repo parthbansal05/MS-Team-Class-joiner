@@ -1,86 +1,86 @@
 [
   {
     "days": {
-      "mon": [
+      "Monday": [
         {
           "time": [
             {
               "ID": 0,
               "class": 1,
-              "name": "",
+              "name": "CSE204",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 915,
+              "end": 1015,
+              "number": 4,
               "row": 0
             },
             {
               "ID": 1,
               "class": 1,
-              "name": "",
+              "name": "MATH242",
               "t-name": "",
-              "start": "",
-              "end": "",
+              "start": 1015,
+              "end": 1115,
               "number": 0,
-              "row": 0
+              "row": 1
             },
             {
               "ID": 2,
               "class": 1,
-              "name": "",
+              "name": "IT201",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1115,
+              "end": 1215,
+              "number": 6,
               "row": 0
             },
             {
               "ID": 3,
               "class": 1,
-              "name": "",
+              "name": "IT201",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1215,
+              "end": 1315,
+              "number": 6,
               "row": 0
             },
             {
               "ID": 4,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1315,
+              "end": 1415,
               "number": 0,
               "row": 0
             },
             {
               "ID": 5,
               "class": 1,
-              "name": "",
+              "name": "CSE208",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1415,
+              "end": 1515,
+              "number": 5,
               "row": 0
             },
             {
               "ID": 6,
               "class": 1,
-              "name": "",
+              "name": "AIML201",
               "t-name": "",
-              "start": "",
-              "end": "",
+              "start": 1515,
+              "end": 1615,
               "number": 0,
               "row": 0
             },
             {
               "ID": 7,
               "class": 1,
-              "name": "",
+              "name": "AIML201",
               "t-name": "",
-              "start": "",
-              "end": "",
+              "start": 1615,
+              "end": 1715,
               "number": 0,
               "row": 0
             }
@@ -93,81 +93,81 @@
             {
               "ID": 0,
               "class": 1,
-              "name": "",
+              "name": "MATH242",
               "t-name": "",
-              "start": 115,
-              "end": 1715,
-              "number": 4,
+              "start": 915,
+              "end": 1015,
+              "number": 0,
               "row": 1
             },
             {
               "ID": 1,
               "class": 1,
-              "name": "",
+              "name": "CSE202",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1015,
+              "end": 1115,
+              "number": 3,
               "row": 0
             },
             {
               "ID": 2,
               "class": 1,
-              "name": "",
+              "name": "CSE204",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1115,
+              "end": 1215,
+              "number": 4,
               "row": 0
             },
             {
               "ID": 3,
               "class": 1,
-              "name": "",
+              "name": "IT201",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1215,
+              "end": 1315,
+              "number": 7,
               "row": 0
             },
             {
               "ID": 4,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1315,
+              "end": 1415,
               "number": 0,
               "row": 0
             },
             {
               "ID": 5,
               "class": 1,
-              "name": "",
+              "name": "BS207",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1415,
+              "end": 1515,
+              "number": 2,
               "row": 0
             },
             {
               "ID": 6,
               "class": 1,
-              "name": "",
+              "name": "SPAN146",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
-              "row": 0
+              "start": 1515,
+              "end": 1615,
+              "number": 2,
+              "row": 1
             },
             {
               "ID": 7,
               "class": 1,
-              "name": "",
+              "name": "AIML201",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1615,
+              "end": 1715,
+              "number": 1,
               "row": 0
             }
           ]
@@ -179,338 +179,338 @@
             {
               "ID": 0,
               "class": 1,
-              "name": "",
+              "name": "CSE208",
               "t-name": "",
               "start": 915,
               "end": 1015,
-              "number": 0,
+              "number": 5,
               "row": 0
             },
             {
               "ID": 1,
               "class": 1,
-              "name": "",
+              "name": "MATH242",
               "t-name": "",
               "start": 1015,
-              "end": 1110,
-              "number": 1,
+              "end": 1115,
+              "number": 0,
               "row": 1
             },
             {
               "ID": 2,
               "class": 1,
-              "name": "",
+              "name": "IT201",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1115,
+              "end": 1215,
+              "number": 7,
               "row": 0
             },
             {
               "ID": 3,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1215,
+              "end": 1315,
               "number": 0,
               "row": 0
             },
             {
               "ID": 4,
               "class": 1,
-              "name": "",
+              "name": "CSE202",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1315,
+              "end": 1415,
+              "number": 3,
               "row": 0
             },
             {
               "ID": 5,
               "class": 1,
-              "name": "",
+              "name": "CSE202",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1415,
+              "end": 1515,
+              "number": 3,
               "row": 0
             },
             {
               "ID": 6,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1515,
+              "end": 1615,
               "number": 0,
               "row": 0
             },
             {
               "ID": 7,
               "class": 1,
-              "name": "",
+              "name": "AIML201",
               "t-name": "",
-              "start": "",
-              "end": "",
+              "start": 1615,
+              "end": 1715,
+              "number": 1,
+              "row": 0
+            }
+          ]
+        }
+      ],
+      "Thursday": [
+        {
+          "time": [
+            {
+              "ID": 0,
+              "class": 1,
+              "name": "MATS201",
+              "t-name": "",
+              "start": 915,
+              "end": 1015,
+              "number": 1,
+              "row": 1
+            },
+            {
+              "ID": 1,
+              "class": 1,
+              "name": "CSE202",
+              "t-name": "",
+              "start": 1015,
+              "end": 1115,
+              "number": 3,
+              "row": 0
+            },
+            {
+              "ID": 2,
+              "class": 1,
+              "name": "CSE204",
+              "t-name": "",
+              "start": 1115,
+              "end": 1215,
+              "number": 4,
+              "row": 0
+            },
+            {
+              "ID": 3,
+              "class": 1,
+              "name": "BS207",
+              "t-name": "",
+              "start": 1215,
+              "end": 1315,
+              "number": 2,
+              "row": 0
+            },
+            {
+              "ID": 4,
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1315,
+              "end": 1415,
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 5,
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1415,
+              "end": 1515,
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 6,
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1515,
+              "end": 1615,
+              "number": 0,
+              "row": 0
+            },
+            {
+              "ID": 7,
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1615,
+              "end": 1715,
               "number": 0,
               "row": 0
             }
           ]
         }
       ],
-      "the": [
+      "Friday": [
         {
           "time": [
             {
               "ID": 0,
               "class": 1,
-              "name": "",
+              "name": "IT201",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 915,
+              "end": 1015,
+              "number": 7,
               "row": 0
             },
             {
               "ID": 1,
               "class": 1,
-              "name": "",
+              "name": "CSE208",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1015,
+              "end": 1115,
+              "number": 5,
               "row": 0
             },
             {
               "ID": 2,
               "class": 1,
-              "name": "",
+              "name": "MATS201",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
-              "row": 0
+              "start": 1115,
+              "end": 1215,
+              "number": 1,
+              "row": 1
             },
             {
               "ID": 3,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1215,
+              "end": 1315,
               "number": 0,
               "row": 0
             },
             {
               "ID": 4,
               "class": 1,
-              "name": "",
+              "name": "BS207",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1315,
+              "end": 1415,
+              "number": 2,
               "row": 0
             },
             {
               "ID": 5,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1415,
+              "end": 1515,
               "number": 0,
               "row": 0
             },
             {
               "ID": 6,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1515,
+              "end": 1615,
               "number": 0,
               "row": 0
             },
             {
               "ID": 7,
               "class": 1,
-              "name": "",
+              "name": "AIML201",
               "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
+              "start": 1615,
+              "end": 1715,
+              "number": 1,
               "row": 0
             }
           ]
         }
       ],
-      "fri": [
+      "Saturday": [
         {
           "time": [
             {
               "ID": 0,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
-              "row": 0
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 0,
+              "end": 415,
+              "number": 3,
+              "row": 1
             },
             {
               "ID": 1,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1515,
+              "end": 1615,
               "number": 0,
               "row": 0
             },
             {
               "ID": 2,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1515,
+              "end": 1615,
               "number": 0,
               "row": 0
             },
             {
               "ID": 3,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1515,
+              "end": 1615,
               "number": 0,
               "row": 0
             },
             {
               "ID": 4,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1515,
+              "end": 1615,
               "number": 0,
               "row": 0
             },
             {
               "ID": 5,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1515,
+              "end": 1615,
               "number": 0,
               "row": 0
             },
             {
               "ID": 6,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1515,
+              "end": 1615,
               "number": 0,
               "row": 0
             },
             {
               "ID": 7,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
-              "row": 0
-            }
-          ]
-        }
-      ],
-      "sat": [
-        {
-          "time": [
-            {
-              "ID": 0,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
-              "row": 0
-            },
-            {
-              "ID": 1,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
-              "row": 0
-            },
-            {
-              "ID": 2,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
-              "row": 0
-            },
-            {
-              "ID": 3,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
-              "row": 0
-            },
-            {
-              "ID": 4,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
-              "row": 0
-            },
-            {
-              "ID": 5,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
-              "row": 0
-            },
-            {
-              "ID": 6,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
-              "number": 0,
-              "row": 0
-            },
-            {
-              "ID": 7,
-              "class": 1,
-              "name": "",
-              "t-name": "",
-              "start": "",
-              "end": "",
+              "class": 0,
+              "name": "NA",
+              "t-name": "NA",
+              "start": 1515,
+              "end": 1615,
               "number": 0,
               "row": 0
             }

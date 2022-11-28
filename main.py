@@ -1,191 +1,195 @@
-from ast import For
-from ctypes import windll, Structure, c_long, byref
-import ctypes
-from imp import IMP_HOOK
-from ntpath import join
+import pyautogui as keys
+from datetime import datetime
 import time
 import json
-from datetime import datetime
-import numpy as np
-import cv2
-from pytesseract import*
-import pyautogui
-from _thread import *
-import matplotlib.pyplot as plt
 
-holdoff_delay = 2
-
-SendInput = ctypes.windll.user32.SendInput
-W = 0x11
-A = 0x1E
-S = 0x1F
-D = 0x20
-M = 0x32
-K = 0x25
-# C struct redefinitions
-PUL = ctypes.POINTER(ctypes.c_ulong)
+keys.PAUSE = 1
+keys.FAILSAFE = True
 
 
-class KeyBdInput(ctypes.Structure):
-    _fields_ = [("wVk", ctypes.c_ushort),
-                ("wScan", ctypes.c_ushort),
-                ("dwFlags", ctypes.c_ulong),
-                ("time", ctypes.c_ulong),
-                ("dwExtraInfo", PUL)]
+def keyPress_hold(hotkey, key):
+    keys.keyDown(str(hotkey))
+    keys.press(str(key))
+    keys.keyUp(str(hotkey))
 
 
-class HardwareInput(ctypes.Structure):
-    _fields_ = [("uMsg", ctypes.c_ulong),
-                ("wParamL", ctypes.c_short),
-                ("wParamH", ctypes.c_ushort)]
+def dist_calc(img):
+    cord_x = []
+    cord_y = []
+    cord = []
+    base_x = 0
+    dist_x = 0
+    base_y = 0
+    dist_y = 0
+    for box in keys.locateAllOnScreen(img):
+        cord_x.append(keys.center(box)[0])
+        cord_y.append(keys.center(box)[1])
+    base_x = cord_x[0]
+    dist_x = int(0.835*base_x)
+    base_y = cord_y[0]+30
+    dist_y = int(1.31*base_y)
+    temp_x = []
+    temp_y = []
+    for i in range(10):
+        temp_x.append(base_x+i*dist_x)
+        temp_y.append(base_y+i*dist_y)
+    cord.append(temp_x)
+    cord.append(temp_y)
+    return(cord)
 
 
-class MouseInput(ctypes.Structure):
-    _fields_ = [("dx", ctypes.c_long),
-                ("dy", ctypes.c_long),
-                ("mouseData", ctypes.c_ulong),
-                ("dwFlags", ctypes.c_ulong),
-                ("time", ctypes.c_ulong),
-                ("dwExtraInfo", PUL)]
+def multi_loc(img):
+    cord_x = []
+    cord_y = []
+    cord = []
+    for box in keys.locateAllOnScreen(img):
+        cord_x.append(keys.center(box)[0])
+        cord_y.append(keys.center(box)[1])
+    cord.append(cord_x)
+    cord.append(cord_y)
+    return(cord)
 
 
-class Input_I(ctypes.Union):
-    _fields_ = [("ki", KeyBdInput),
-                ("mi", MouseInput),
-                ("hi", HardwareInput)]
+def join_class(json_obj):
+    # brightness 1
+    # size 70%
+    short_menue_l = "short_menue_l.png"
+    teams_key_l = "teams_key_l.png"
+
+    short_menue = "short_menue.png"
+    teams_key = "teams_key.png"
+    init_join_key = "init_join_key.png"
+    init_join_key_stacked = "init_join_key_stacked.png"
+    sec_join_key = "sec_join_key.png"
+    team_mic_on = "team_mic_on.png"
+    
+    time_ref = int(time.strftime('%H%M'))
+    if (int(json_obj["end"]) < time_ref):
+        return 0
+    time.sleep(4)
+    keyPress_hold("win", "d")
+    time.sleep(1)
+    keyPress_hold("win", 2)
+    print("win")
+    loc = keys.locateCenterOnScreen(teams_key)
+    keys.click(loc)
+    keys.click(loc)
+    keys.click(loc)
+    cords = dist_calc(short_menue)
+    keys.click(cords[0][json_obj["number"]], cords[1][json_obj["row"]])
+    time.sleep(5)
+    cords = multi_loc(init_join_key)
+    print(cords)
+    # cords=cords[0]
+    cords_stacked = multi_loc(init_join_key_stacked)
+    if (len(cords[0]) == 1):
+        # if(True):
+        # time.sleep(2)
+        try:
+            keys.click(cords[0][0], cords[1][0])
+            time.sleep(10)
+        except:
+            print("unable to find join init")
+        try:
+            cords = multi_loc(sec_join_key)
+            keys.click(cords[0][0], cords[1][0])
+        except:
+            print("unable to find join sec")
+        time.sleep(10)
+        try:
+            cords = multi_loc(team_mic_on)
+            keys.click(cords[0][0], cords[1][0])
+        except:
+            print("mic is off")
+
+    elif(len(cords[0]) != 0):
+        if (len(cords_stacked[0]) > 0):
+            pass
+    else:
+        time.sleep(30)
+        print("calling join 107")
+        join_class(json_obj)
 
 
-class Input(ctypes.Structure):
-    _fields_ = [("type", ctypes.c_ulong),
-                ("ii", Input_I)]
+def leave_class():
+    team_leave_key = "team_leave_key.png"
+    teams_key = "teams_key.png"
+    loc = keys.locateCenterOnScreen(team_leave_key)
+    keys.click(loc)
+    keyPress_hold("win", 2)
+    loc = keys.locateCenterOnScreen(teams_key)
+    keys.click(loc)
+    keys.click(loc)
 
 
-class POINT(Structure):
-    _fields_ = [("x", c_long), ("y", c_long)]
+def stay(json_obj):
+    team_leave_key = "team_leave_key.png"
+    loc = keys.locateCenterOnScreen(team_leave_key)
+    if loc != None:
+        print("staying")
+        pass
+    else:
+        print("rejoining")
+        try:
+            print("calling join 131")
+            join_class(json_obj)
+        except:
+            print("unable to join")
 
 
-def queryMousePosition():
-    pt = POINT()
-    windll.user32.GetCursorPos(byref(pt))
-    return pt
-    # return { "x": pt.x, "y": pt.y}/
-
-
-def hold_move(x, y, X, Y):
-    ctypes.windll.user32.SetCursorPos(x, y)
-    ctypes.windll.user32.mouse_event(2, 0, 0, 0, 0)  # left down
-    ctypes.windll.user32.SetCursorPos(X, Y)
-    ctypes.windll.user32.mouse_event(4, 0, 0, 0, 0)  # left up
-
-
-def ReleaseKey(hexKeyCode):
-    extra = ctypes.c_ulong(0)
-    ii_ = Input_I()
-    ii_.ki = KeyBdInput(0, hexKeyCode, 0x0008 | 0x0002,
-                        0, ctypes.pointer(extra))
-    x = Input(ctypes.c_ulong(1), ii_)
-    ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
-
-
-def click(x, y):
-    # convert to ctypes pixels
-    # x = int(x * 0.666)
-    # y = int(y * 0.666)
-    ctypes.windll.user32.SetCursorPos(x, y)
-    ctypes.windll.user32.mouse_event(2, 0, 0, 0, 0)  # left down
-    ctypes.windll.user32.mouse_event(4, 0, 0, 0, 0)  # left up
-
-
-def moveMouseTo(x, y):
-    # convert to ctypes pixels
-    # x = int(x * 0.666)
-    # y = int(y * 0.666)
-    print(x, y)
-    ctypes.windll.user32.SetCursorPos(x, y)
-    # ctypes.windll.user32.mouse_event(2, 0, 0, 0, 0)  # left down
-    # ctypes.windll.user32.mouse_event(4, 0, 0, 0, 0)  # left up
-
-
-def PressKey(hexKeyCode):
-    extra = ctypes.c_ulong(0)
-    ii_ = Input_I()
-    ii_.ki = KeyBdInput(0, hexKeyCode, 0x0008, 0, ctypes.pointer(extra))
-    x = Input(ctypes.c_ulong(1), ii_)
-    ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
-
-
-def join_class(class_obj):
-    print(class_obj)
-    click(260, 1050)
-    time.sleep(holdoff_delay)
-    click(30, 115)
-    time.sleep(holdoff_delay)
-    click(30, 115)
-    time.sleep(holdoff_delay)
-    click((160+228*class_obj["number"]), 243+209*class_obj["row"])
-    time.sleep(holdoff_delay)
-
-    pytesseract.tesseract_cmd = r"tesseract.exe"
-
-    screen = pyautogui.screenshot()
-    screen = cv2.cvtColor(np.array(screen), cv2.COLOR_RGB2BGR)
-    cv2.imwrite("te.jpg", screen)
-    ss = cv2.imread('te.jpg', 0)
-    plt.imshow(ss)
-    plt.grid()
-    plt.show()
-
-    metting_no_image = ss[100:120, 1633:1647]
-    plt.imshow(metting_no_image)
-    plt.grid()
-    plt.show()
-
-    no_mettings = image_to_string(metting_no_image, config='--psm 6')
-    print(no_mettings)
-    # if  no_mettings.findall('[0-9]+', 'dfgh3'):
-    #     pass
-
-    join_area = ss[90:870, 750:850]
-    results = image_to_data(
-        ss, output_type=Output.DICT, config='--psm 6')
-    for i in range(0, len(results["text"])):
-        x = results["left"][i]+620
-        y = results["top"][i]+90
-        w = results["width"][i]
-        h = results["height"][i]
-
-        text = results["text"][i]
-        conf = results["conf"][i]
-
-        if text=="join":
-            print("Confidence: {}".format(conf))
-            print("Text: {}".format(text))
-            print("x:{} y:{}".format(x, y))
-            print("")
-
-            text = "".join(text).strip()
-            cv2.rectangle(screen,(x, y),(x + w, y + h),(0, 0, 255), 2)
-            cv2.putText(screen,text,(x, y - 10),cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 255, 255), 3)
-            click(x, y)
-            time.sleep(holdoff_delay)
-            click(1340, 665)
-
-    # After all, we will show the output image
-    cv2.imshow("Image", screen)
-    cv2.waitKey(0)
-
-    time.sleep(1000)
+def typeInChatBox(msg):
+    team_chat_1 = "team_chat_1.png"
+    team_chat_2 = "team_chat_2.png"
+    loc = keys.locateCenterOnScreen(team_chat_1)
+    keys.click(loc)
+    keys.typewrite(msg+"\n", interval=0.1)
+    keys.moveRel(100, 100, duration=1)
+    loc = keys.locateCenterOnScreen(team_chat_2)
+    keys.click(loc)
 
 
 def main():
-    time_table = ""
-    curr_day = datetime.today().strftime('%A')
-    with open("tt.json", "r") as read_file:
-        time_table_temp = json.load(read_file)
-    time_table = time_table_temp[0]["days"][curr_day][0]
-    for i in range(0, 7):
-        if ((int(time_table["time"][i]["start"]) <= int(time.strftime('%H%M'))) and (int(time_table["time"][i]["end"]) > int(time.strftime('%H%M')))):
-            join_class(time_table["time"][i])
+    
+    while(True):
+        with open("TimeTable.json", "r") as read_file:
+            time_table_temp = json.load(read_file)
+        time_table = ""
+        curr_day = datetime.today().strftime('%A')
+
+        time_table = time_table_temp[0]["days"][curr_day][0]
+        for i in range(0, 8):
+            table_ref = time_table["time"][i]
+            time_ref = int(time.strftime('%H%M'))
+            if (int(table_ref["class"]) and (int(table_ref["start"]) <= time_ref) and (int(table_ref["end"]) > time_ref)):
+                try:
+                    print("started")
+                    join_class(time_table["time"][i])
+                    print("ended")
+                except:
+                    print("unable to join")
+                while (int(table_ref["end"]) > time_ref):
+                    time.sleep(0.5*60)
+                    # time.sleep(5)
+                    print("calling stay 170")
+                    stay(time_table["time"][i])
+                    time_ref = int(time.strftime('%H%M'))
+                try:
+                    print("calling leave 174")
+                    leave_class()
+                except:
+                    print("unable to leave the class")
+                    print("calling leave 178")
+                    time.sleep(60)
+                    leave_class()
+            elif ((int(table_ref["class"])==0) and (int(table_ref["start"]) <= time_ref) and (int(table_ref["end"]) > time_ref)):
+                print("in sleep")
+                time.sleep(2*60)
+            elif ((int(table_ref["ID"])==7) and (int(table_ref["end"]) < time_ref)):
+                print("in deep sleep")
+                time.sleep(5*60)
+        time.sleep(10)
+        print("classes not started/shifting")
 
 
 main()
+time.sleep(20)
